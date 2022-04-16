@@ -11,7 +11,7 @@ interface FilterProps {
 
 const Filter = ({ filters }: FilterProps) => {
   return (
-    <div className="flex items-center p-4 space-x-4">
+    <div className="flex items-center space-x-4">
       <h1 className="text-xl font-bold text-white">Weaknesses</h1>
       <ul className="flex space-x-2">
         {filters.map(({ icon, label, value, selected }) => {
