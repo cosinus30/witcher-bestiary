@@ -13,6 +13,9 @@ module.exports = {
       },
       fontFamily: {
         'cinzel': ['Cinzel', 'serif']
+      },
+      backgroundImage: {
+        'witcher-image': "url('/witcher.png')"
       }
     },
   },
