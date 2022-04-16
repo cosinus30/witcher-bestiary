@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Filter from "./Filter";
+import Search from "./Search";
 interface FilterProps {
   onFilterChange: (filter: string) => void;
   filters: {
@@ -44,8 +45,9 @@ const filters = [
 
 const MainBar = () => {
   return (
-    <div className="mx-auto my-8 border border-secondary border-opacity-75 md:max-w-5xl">
+    <div className="flex flex-col justify-center my-8 mx-auto border border-secondary/75 md:flex-row md:items-center md:justify-between md:max-w-5xl p-4">
       <Filter filters={filters} />
+      <Search />
     </div>
   );
 };
