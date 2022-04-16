@@ -6,7 +6,8 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        darky: "#202125"
+        darky: "#202125",
+        secondary: "#464F73"
       },
       dropShadow: {
         'darky': '0 8px 8px rgba(0, 0, 0, 0.25)'
