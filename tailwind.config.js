@@ -11,6 +11,7 @@ module.exports = {
       },
       fontFamily: {
         cinzel: ["Cinzel", "serif"],
+        lustria: ["Lustria", "serif"],
       },
       backgroundImage: {
         "witcher-image": "url('/witcher.png')",
