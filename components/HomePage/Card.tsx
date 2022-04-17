@@ -1,5 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
+import { useContext } from "react";
+import { DropdownContext, DropdownContextType, initialDropdownState } from "../../context/DropdownProvider";
 
 export interface CardProps {
   image: {
@@ -13,6 +15,8 @@ export interface CardProps {
 }
 
 const Card = ({ type, image, name, weaknesses }: CardProps) => {
+  const { dropdownItems } = useContext(DropdownContext) as DropdownContextType;
+
   return (
     <Link href={`/${name}`}>
       <div className="group relative transition-all duration-300 sm:hover:scale-110">
@@ -25,9 +29,12 @@ const Card = ({ type, image, name, weaknesses }: CardProps) => {
             className="group-hover:opacity-75"
           ></Image>
         </div>
-        <p className="absolute inset-x-0 bottom-0 py-2 text-center text-white bg-darky shadow-inner drop-shadow-lg">
-          {name}
-        </p>
+          <div className="flex absolute inset-x-0 bottom-0 justify-center items-center text-white bg-darky shadow-inner drop-shadow-lg">
+            <span>{name}</span>
+            <span className="pt-1 ml-2">
+              <Image src={`/${type}s.svg`} alt={type} width={32} height={32}></Image>
+            </span>
+          </div>
       </div>
     </Link>
   );
