@@ -5,8 +5,8 @@ import Cards from "../components/HomePage/Cards";
 import Header from "../components/HomePage/Header";
 import MainBar from "../components/HomePage/MainBar";
 import Navbar from "../components/Navigation/Navbar";
-import DropdownProvider, { DropdownContext, DropdownContextType, IDropdown } from "../context/DropdownProvider";
-import FilterProvider, { FilterContext, FilterContextType, IFilter } from "../context/FilterProvider";
+import { DropdownContext, DropdownContextType } from "../context/DropdownProvider";
+import { FilterContext, FilterContextType } from "../context/FilterProvider";
 
 const Home: NextPage = () => {
   const [creatures, setCreatures] = useState<CardProps[]>(cards);
@@ -41,7 +41,6 @@ const Home: NextPage = () => {
 
   return (
     <div>
-      <Navbar />
       <Header />
       <MainBar />
       <Cards cards={creatures} />
