@@ -1,7 +1,5 @@
 import Image from "next/image";
 import Link from "next/link";
-import { useContext } from "react";
-import { DropdownContext, DropdownContextType, initialDropdownState } from "../../context/DropdownProvider";
 
 export interface CardProps {
   image: {
@@ -15,8 +13,6 @@ export interface CardProps {
 }
 
 const Card = ({ type, image, name, weaknesses }: CardProps) => {
-  const { dropdownItems } = useContext(DropdownContext) as DropdownContextType;
-
   return (
     <Link href={`/${name}`}>
       <div className="group relative transition-all duration-300 sm:hover:scale-110">
