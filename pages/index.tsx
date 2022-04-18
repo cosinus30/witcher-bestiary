@@ -1,16 +1,19 @@
-import type { NextPage } from "next";
+import type { GetStaticProps, NextPage } from "next";
 import { useContext, useEffect, useState } from "react";
 import { CardProps } from "../components/HomePage/Card";
 import Cards from "../components/HomePage/Cards";
 import Header from "../components/HomePage/Header";
 import MainBar from "../components/HomePage/MainBar";
-import Navbar from "../components/Navigation/Navbar";
 import { DropdownContext, DropdownContextType } from "../context/DropdownProvider";
 import { FilterContext, FilterContextType } from "../context/FilterProvider";
+import { supabase } from "../util/SupabaseClient";
 
-const Home: NextPage = () => {
-  const [creatures, setCreatures] = useState<CardProps[]>(cards);
-  const [initialCreatures, setInitialCreatures] = useState<CardProps[]>(cards);
+interface IHome {
+  initialCreatures: CardProps[];
+}
+
+const Home = ({ initialCreatures }: IHome) => {
+  const [creatures, setCreatures] = useState<CardProps[]>(initialCreatures);
   const { selectedDropdownItem } = useContext(DropdownContext) as DropdownContextType;
   const { filters } = useContext(FilterContext) as FilterContextType;
 
@@ -49,6 +52,33 @@ const Home: NextPage = () => {
 };
 
 export default Home;
+
+export const getStaticProps: GetStaticProps = async (context) => {
+  const { data, error } = await supabase.from("creatures").select(`
+    id,
+    name,
+    type,
+    weaknesses,
+    images->images
+  `);
+  if(error){
+    console.error(error);
+  }
+
+  return {
+    props: {
+      initialCreatures: data?.map((creature) => {
+        return {
+          id: creature.id,
+          name: creature.name,
+          type: creature.type,
+          weaknesses: creature.weaknesses,
+          image: creature.images[0],
+        };
+      }),
+    },
+  };
+};
 
 const cards: CardProps[] = [
   {
