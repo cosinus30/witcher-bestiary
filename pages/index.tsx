@@ -45,7 +45,7 @@ const Home = ({ initialCreatures }: IHome) => {
   }, [selectedDropdownItem, filters]);
 
   return (
-    <div>
+    <div className="mx-4 mb-16">
       <Header />
       <MainBar />
       <Cards cards={creatures} />
