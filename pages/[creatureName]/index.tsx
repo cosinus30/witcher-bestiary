@@ -1,6 +1,7 @@
 import type { GetStaticPaths, GetStaticProps, NextPage } from "next";
 import Image from "next/image";
-import { useContext, useEffect, useState } from "react";
+import { useState } from "react";
+import ImageDeck from "../../components/CardDetail/ImageDeck";
 import Quote from "../../components/CardDetail/Quote";
 import { supabase } from "../../util/SupabaseClient";
 
@@ -29,17 +30,7 @@ const Home = (props: IDetailPage) => {
   return (
     <div className="mx-auto max-w-4xl">
       <h1 className="block ml-2 text-7xl sm:text-8xl ">{name}</h1>
-      <div className="grid grid-flow-col gap-2 sm:grid-rows-2">
-        <div className="overflow-hidden row-span-2 w-full rounded-sm shadow-lg aspect-w-9 aspect-h-16">
-          <Image src={images[0].url} alt={images[0].alt} layout="fill" objectFit="cover"></Image>
-        </div>
-        <div className="hidden overflow-hidden col-span-1 w-full rounded-sm shadow-lg aspect-w-4 aspect-h-3 sm:block">
-          <Image src={images[1].url} alt={images[1].alt} layout="fill" objectFit="cover"></Image>
-        </div>
-        <div className="hidden overflow-hidden col-span-1 w-full rounded-sm shadow-lg aspect-w-4 aspect-h-3 sm:block">
-          <Image src={images[2].url} alt={images[2].alt} layout="fill" objectFit="cover"></Image>
-        </div>
-      </div>
+      <ImageDeck images={images} />
       <div className="grid gap-2 p-8 my-8 border border-secondary/75 divide-secondary/75 sm:grid-cols-2 sm:divide-y-0 sm:divide-x">
         <div className="flex flex-col justify-center mr-16 space-y-4">
           <div className="flex justify-between items-center sm:grid sm:grid-cols-3">
