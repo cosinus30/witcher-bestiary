@@ -93,13 +93,19 @@ const Home = (props: IDetailPage) => {
             <div className="space-y-2">
               <h2 className="text-3xl font-semibold">Combat Tactics</h2>
               <ul className="space-y-2">
-                {combatTactics.map((entry, entryIdx) => {
-                  return (
-                    <li className="font-lustria text-base sm:text-lg" key={entryIdx}>
-                      {entry}
-                    </li>
-                  );
-                })}
+                {combatTactics.length > 0 ? (
+                  combatTactics.map((entry, entryIdx) => {
+                    return (
+                      <li className="font-lustria text-base sm:text-lg" key={entryIdx}>
+                        {entry}
+                      </li>
+                    );
+                  })
+                ) : (
+                  <li className="font-lustria text-base sm:text-lg">
+                    We could not find any combat log regarding this creature fellow Witcher. You are on your own in this one.
+                  </li>
+                )}
               </ul>
             </div>
           </div>
