@@ -1,4 +1,4 @@
-import type { GetStaticProps, NextPage } from "next";
+import type { GetStaticProps } from "next";
 import Head from "next/head";
 import { useContext, useEffect, useState } from "react";
 import { CardProps } from "../components/HomePage/Card";

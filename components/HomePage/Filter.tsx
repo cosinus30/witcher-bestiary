@@ -1,4 +1,4 @@
-import React, { MouseEvent, MouseEventHandler } from "react";
+import React from "react";
 import { FilterContext, FilterContextType } from "../../context/FilterProvider";
 
 
@@ -6,7 +6,7 @@ const Filter = () => {
   const { filters, updateFilters} = React.useContext(FilterContext) as FilterContextType;
 
   return (
-    <div className="flex md:flex-col items-center space-x-4">
+    <div className="flex items-center space-x-4 md:flex-col">
       <h1 className="text-xl font-bold text-white">Weaknesses</h1>
       <ul className="flex space-x-2">
         {filters.map(({ icon, label, value, selected }) => {

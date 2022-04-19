@@ -13,7 +13,7 @@ const Quote = ({ author, content }: IQoute) => (
     <p className="mb-4 font-lustria text-base sm:text-lg">{content}</p>
     <cite className="flex items-center">
       <div className="flex flex-col items-start">
-        <span className="mb-1 text-sm italic font-regular">{author}</span>
+        <span className="mb-1 text-sm italic">{author}</span>
       </div>
     </cite>
   </blockquote>

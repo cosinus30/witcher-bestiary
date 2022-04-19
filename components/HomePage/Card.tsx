@@ -12,8 +12,9 @@ export interface CardProps {
   id: string;
 }
 
-const Card = ({ type, image, name, weaknesses }: CardProps) => {
+const Card = ({ type, image, name }: CardProps) => {
   return (
+    // eslint-disable-next-line @next/next/link-passhref
     <Link href={`/${name}`}>
       <div className="group relative transition-all duration-300 sm:hover:scale-110">
         <div className="overflow-hidden w-full rounded-sm aspect-w-3 aspect-h-4">
