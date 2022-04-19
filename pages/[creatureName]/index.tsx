@@ -1,4 +1,5 @@
 import type { GetStaticPaths, GetStaticProps, NextPage } from "next";
+import Head from "next/head";
 import Image from "next/image";
 import { useState } from "react";
 import ImageDeck from "../../components/CardDetail/ImageDeck";
@@ -29,6 +30,11 @@ const Home = (props: IDetailPage) => {
 
   return (
     <div className="mx-auto max-w-4xl">
+      <Head>
+        <title>{name}</title>
+        <meta name="viewport" content="initial-scale=1.0, width=device-width" />
+        <meta name="description" content={shortDescription} />
+      </Head>
       <h1 className="block ml-2 text-7xl sm:text-8xl ">{name}</h1>
       <ImageDeck images={images} />
       <div className="grid gap-2 p-8 my-8 border border-secondary/75 divide-secondary/75 sm:grid-cols-2 sm:divide-y-0 sm:divide-x">
@@ -103,7 +109,8 @@ const Home = (props: IDetailPage) => {
                   })
                 ) : (
                   <li className="font-lustria text-base sm:text-lg">
-                    We could not find any combat log regarding this creature fellow Witcher. You are on your own in this one.
+                    We could not find any combat log regarding this creature fellow Witcher. You are on your own in this
+                    one.
                   </li>
                 )}
               </ul>

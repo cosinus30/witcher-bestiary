@@ -1,4 +1,5 @@
 import type { GetStaticProps, NextPage } from "next";
+import Head from "next/head";
 import { useContext, useEffect, useState } from "react";
 import { CardProps } from "../components/HomePage/Card";
 import Cards from "../components/HomePage/Cards";
@@ -20,9 +21,6 @@ const Home = ({ initialCreatures }: IHome) => {
   useEffect(() => {
     const activeSigns = filters.filter((sign) => sign.selected);
     const type = selectedDropdownItem.value;
-
-    console.log(type);
-
     const filteredCreatures = initialCreatures.filter((creature) => {
       let signsMatch = false;
       let typeMatch = false;
@@ -31,8 +29,7 @@ const Home = ({ initialCreatures }: IHome) => {
           signsMatch = true;
         }
       });
-      if(!creature.weaknesses)
-        signsMatch = true;
+      if (!creature.weaknesses) signsMatch = true;
       if (type === "all") {
         typeMatch = true;
       } else if (creature.type === type) {
@@ -46,6 +43,11 @@ const Home = ({ initialCreatures }: IHome) => {
 
   return (
     <div className="mx-4 mb-16">
+      <Head>
+        <title>Witcher 3 Bestiary</title>
+        <meta name="viewport" content="initial-scale=1.0, width=device-width" />
+        <meta name="description" content="Showcase of the most fierce creatures in Witcher 3 universe" />
+      </Head>
       <Header />
       <MainBar />
       <Cards cards={creatures} />
@@ -63,7 +65,7 @@ export const getStaticProps: GetStaticProps = async (context) => {
     weaknesses,
     images->images
   `);
-  if(error){
+  if (error) {
     console.error(error);
   }
 
