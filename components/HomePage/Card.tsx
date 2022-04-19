@@ -21,7 +21,7 @@ const Card = ({ type, image, name, weaknesses }: CardProps) => {
             src={image.url}
             alt={image.alt}
             layout="fill"
-            objectFit="cover"
+            objectFit="contain"
             className="group-hover:opacity-75"
           ></Image>
         </div>
