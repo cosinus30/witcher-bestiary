@@ -12,7 +12,7 @@ const Navbar = () => {
         <nav className="flex space-x-2">
           <NavbarItem
             label="Github"
-            link="https:www.github.com/cosinus30/witcher-bestiary"
+            link="https://www.github.com/cosinus30/witcher-bestiary"
             logo={<Image src="/icons8-github.svg" height={30} width={30} alt="Github link" />}
           />
           <NavbarItem
