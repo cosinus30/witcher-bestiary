@@ -27,10 +27,12 @@ const Home = ({ initialCreatures }: IHome) => {
       let signsMatch = false;
       let typeMatch = false;
       activeSigns.forEach((sign) => {
-        if (creature.weaknesses.includes(sign.value)) {
+        if (creature.weaknesses?.includes(sign.value)) {
           signsMatch = true;
         }
       });
+      if(!creature.weaknesses)
+        signsMatch = true;
       if (type === "all") {
         typeMatch = true;
       } else if (creature.type === type) {

@@ -162,7 +162,7 @@ export const getStaticProps: GetStaticProps = async (context) => {
       id: data?.id,
       name: data?.name,
       type: data?.type,
-      weaknesses: data?.weaknesses.split(","),
+      weaknesses: data?.weaknesses ? data?.weaknesses.split(",") : [],
       images: [...data?.images],
       shortDescription: data?.short_description,
       summary: data?.summary,
