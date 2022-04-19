@@ -1,34 +1,19 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+[`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
-## Getting Started
+## Witcher 3 Bestiary
+A bestiary is usually a volume containing information on different creatures, either living or mythical, depending on the focus of the treatise. In The Witcher 3: Wild Hunt, there are many beasts to discover and slay in your adventures as Geralt. As you come across new creatures all of the information you know about them is entered into this book. This Information can be found out by simply finding and engaging the monster or by reading certain books. Be aware that all animals and beasts Geralt kills have an actual scent that attracts other monsters in the area.
 
-First, run the development server:
+This project is a collection of all the beasts in the Witcher 3: Wild Hunt.
 
-```bash
-npm run dev
-# or
-yarn dev
-```
+## Project Details
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Project is built with [Next.js](https://nextjs.org/) using [TypeScript](https://www.typescriptlang.org/), [TailwindCSS](https://tailwindcss.com/) and is deployed to [Vercel](https://vercel.com/).
 
-You can start editing the page by modifying `pages/index.tsx`. The page auto-updates as you edit the file.
+The data used to create this project is from [The Witcher 3: Wild Hunt Fandom Page](https://witcher.fandom.com/wiki/The_Witcher_3_bestiary) and [The Witcher 3: Wild Hunt Fextralife Page](https://thewitcher3.wiki.fextralife.com/Creatures+and+Monsters). I strongly suggest visiting their page if you are here for the beasts :)
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.ts`.
+[Supabase (a Firebase alternative)](https://supabase.com/) is used as a database for this project.
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+Designed is made in [Figma](https://www.figma.com/) and can be accessed [here](https://www.figma.com/file/9h2dYAYnF9tQOfxp9EO0GS/Witcher-3?node-id=0%3A1)
 
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+## Project Website
+The site can be accessed from [here](https://witcher-bestiary.vercel.app/)
