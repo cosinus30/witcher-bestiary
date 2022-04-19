@@ -53,46 +53,46 @@ export const initialDropdownState = [
   {
     label: "Draconids",
     value: "draconids",
-    icon: <Image src="/beasts.svg" width={20} height={20} alt={"beasts"}></Image>,
+    icon: <Image src="/draconids.svg" width={20} height={20} alt={"beasts"}></Image>,
   },
   {
     label: "Elementa",
-    value: "elementa",
-    icon: <Image src="/beasts.svg" width={20} height={20} alt={"beasts"}></Image>,
+    value: "elementas",
+    icon: <Image src="/elementas.svg" width={20} height={20} alt={"beasts"}></Image>,
   },
   {
     label: "Hybrids",
     value: "hybrids",
-    icon: <Image src="/beasts.svg" width={20} height={20} alt={"beasts"}></Image>,
+    icon: <Image src="/hybrids.svg" width={20} height={20} alt={"beasts"}></Image>,
   },
   {
     label: "Insectoids",
     value: "insectoids",
-    icon: <Image src="/beasts.svg" width={20} height={20} alt={"beasts"}></Image>,
+    icon: <Image src="/insectoids.svg" width={20} height={20} alt={"beasts"}></Image>,
   },
   {
     label: "Necrophages",
     value: "necrophages",
-    icon: <Image src="/beasts.svg" width={20} height={20} alt={"beasts"}></Image>,
+    icon: <Image src="/necrophages.svg" width={20} height={20} alt={"beasts"}></Image>,
   },
   {
     label: "Ogroids",
     value: "ogroids",
-    icon: <Image src="/beasts.svg" width={20} height={20} alt={"beasts"}></Image>,
+    icon: <Image src="/ogroids.svg" width={20} height={20} alt={"beasts"}></Image>,
   },
   {
     label: "Relicts",
     value: "relicts",
-    icon: <Image src="/beasts.svg" width={20} height={20} alt={"beasts"}></Image>,
+    icon: <Image src="/relicts.svg" width={20} height={20} alt={"beasts"}></Image>,
   },
   {
     label: "Specters",
     value: "specters",
-    icon: <Image src="/beasts.svg" width={20} height={20} alt={"beasts"}></Image>,
+    icon: <Image src="/specters.svg" width={20} height={20} alt={"beasts"}></Image>,
   },
   {
     label: "Vampires",
     value: "vampires",
-    icon: <Image src="/beasts.svg" width={20} height={20} alt={"beasts"}></Image>,
+    icon: <Image src="/vampires.svg" width={20} height={20} alt={"beasts"}></Image>,
   },
 ];
