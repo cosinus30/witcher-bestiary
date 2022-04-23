@@ -7,7 +7,7 @@ export default function Dropdown() {
   const { dropdownItems, selectedDropdownItem, updateSelected } = useContext(DropdownContext) as DropdownContextType;
 
   return (
-    <div className="w-72">
+    <div className="mt-4 w-full md:mt-0 md:w-72">
       <Listbox value={selectedDropdownItem.value} onChange={updateSelected}>
         <div className="relative mt-1">
           <Listbox.Button className="relative p-4 w-full text-left text-white bg-darky rounded-lg shadow-md hover:cursor-pointer sm:text-sm">
