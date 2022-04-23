@@ -1,5 +1,3 @@
-[`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
-
 ## Witcher 3 Bestiary
 A bestiary is usually a volume containing information on different creatures, either living or mythical, depending on the focus of the treatise. In The Witcher 3: Wild Hunt, there are many beasts to discover and slay in your adventures as Geralt. As you come across new creatures all of the information you know about them is entered into this book. This Information can be found out by simply finding and engaging the monster or by reading certain books. Be aware that all animals and beasts Geralt kills have an actual scent that attracts other monsters in the area.
 
