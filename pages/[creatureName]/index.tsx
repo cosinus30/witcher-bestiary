@@ -42,9 +42,13 @@ const Home = (props: IDetailPage) => {
           <div className="flex justify-between items-center sm:grid sm:grid-cols-3">
             <p className="col-span-2 text-xl font-semibold ">Weaknesses</p>
             <div className="-ml-2">
-              {weaknesses.map((weakness) => {
-                return <Image key={weakness} src={`/${weakness}.svg`} alt={type} width={48} height={48}></Image>;
-              })}
+              {weaknesses.length > 0 ? (
+                weaknesses.map((weakness) => {
+                  return <Image key={weakness} src={`/${weakness}.svg`} alt={type} width={48} height={48}></Image>;
+                })
+              ) : (
+                <p className="text-center">Oops!</p>
+              )}
             </div>
           </div>
           <div className="flex justify-between items-center sm:grid sm:grid-cols-3">
