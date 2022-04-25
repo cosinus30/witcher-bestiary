@@ -37,11 +37,11 @@ const Home = (props: IDetailPage) => {
       </Head>
       <h1 className="block ml-2 text-7xl sm:text-8xl ">{name}</h1>
       <ImageDeck images={images} />
-      <div className="grid gap-2 p-8 my-8 border border-secondary/75 divide-secondary/75 sm:grid-cols-2 sm:divide-y-0 sm:divide-x">
+      <div className="grid gap-2 items-center p-8 my-8 border border-secondary/75 divide-secondary/75 sm:grid-cols-2 sm:divide-y-0 sm:divide-x">
         <div className="flex flex-col justify-center mr-16 space-y-4">
-          <div className="flex justify-between items-center sm:grid sm:grid-cols-3">
-            <p className="col-span-2 text-xl font-semibold ">Weaknesses</p>
-            <div className="-ml-2">
+          <div className="flex justify-between items-center">
+            <p className="text-xl font-semibold ">Weaknesses</p>
+            <div>
               {weaknesses.length > 0 ? (
                 weaknesses.map((weakness) => {
                   return <Image key={weakness} src={`/${weakness}.svg`} alt={type} width={48} height={48}></Image>;
@@ -51,17 +51,17 @@ const Home = (props: IDetailPage) => {
               )}
             </div>
           </div>
-          <div className="flex justify-between items-center sm:grid sm:grid-cols-3">
-            <p className="col-span-2 text-xl font-semibold">Class</p>
-            <div className="flex items-center">
-              <p>{type}</p>
-              <span>
+          <div className="flex justify-between items-center">
+            <p className="text-xl font-semibold">Class</p>
+            <div className="flex items-center space-x-1">
+              <p className="whitespace-nowrap">{type.split("_").join(" ")}</p>
+              <span className="">
                 <Image src={`/${type}.svg`} alt={type} width={32} height={32}></Image>
               </span>
             </div>
           </div>
         </div>
-        <div className="flex flex-col pt-4 space-y-4 font-lustria sm:pl-4">
+        <div className="pt-4 space-y-4 font-lustria sm:pt-0 sm:pl-4">
           <p>{shortDescription}</p>
         </div>
       </div>
