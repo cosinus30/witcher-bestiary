@@ -5,6 +5,8 @@ import { useState } from "react";
 import ImageDeck from "../../components/CardDetail/ImageDeck";
 import Quote from "../../components/CardDetail/Quote";
 import { supabase } from "../../util/SupabaseClient";
+import { ArrowLeftIcon } from "@heroicons/react/solid";
+import Link from "next/link";
 
 interface IDetailPage {
   id: string;
@@ -29,7 +31,7 @@ const Home = (props: IDetailPage) => {
   const { name, type, images, bestiaryEntry, combatTactics, shortDescription, summary, weaknesses } = props;
 
   return (
-    <div className="mx-auto max-w-4xl">
+    <div className="mx-auto mb-16 max-w-4xl">
       <Head>
         <title>{name}</title>
         <meta name="viewport" content="initial-scale=1.0, width=device-width" />
@@ -122,6 +124,12 @@ const Home = (props: IDetailPage) => {
           </div>
         )}
       </div>
+      <Link href="/">
+        <a className="flex ml-2 space-x-2 hover:underline underline-offset-4 opacity-50 hover:opacity-100 transition-opacity">
+          <ArrowLeftIcon className="w-5 h-5" aria-hidden="true" />
+          <p>All Creatures</p>
+        </a>
+      </Link>
     </div>
   );
 };
