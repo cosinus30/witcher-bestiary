@@ -28,8 +28,8 @@ const Card = ({ type, image, name }: CardProps) => {
         </div>
           <div className="flex absolute inset-x-0 bottom-0 justify-center items-center text-white bg-darky shadow-inner drop-shadow-lg">
             <p className="truncate">{name}</p>
-            <span className="pt-1 ml-2">
-              <Image src={`/${type}.svg`} alt={type} width={32} height={32}></Image>
+            <span className="pt-1 mx-3 ">
+              <Image src={`/${type}.svg`} alt={type} width={24} height={24}></Image>
             </span>
           </div>
       </div>
