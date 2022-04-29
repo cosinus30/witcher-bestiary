@@ -14,7 +14,7 @@ module.exports = {
         lustria: ["Lustria", "serif"],
       },
       backgroundImage: {
-        "witcher-image": "url('/witcher.png')",
+        "witcher-image": "url('/witcher.webp')",
       },
     },
   },
