@@ -40,7 +40,7 @@ const Home = (props: IDetailPage) => {
       <h1 className="block ml-2 text-5xl sm:text-8xl ">{name}</h1>
       <ImageDeck images={images} />
       <div className="grid gap-2 items-center p-8 my-8 border border-secondary/75 divide-secondary/75 sm:grid-cols-2 sm:divide-y-0 sm:divide-x">
-        <div className="flex flex-col justify-center mr-16 space-y-4">
+        <div className="flex flex-col justify-center space-y-4 sm:mr-16">
           <div className="flex justify-between items-center">
             <p className="text-xl font-semibold ">Weaknesses</p>
             <div>
