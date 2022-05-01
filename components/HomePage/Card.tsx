@@ -17,7 +17,7 @@ const Card = ({ type, image, name }: CardProps) => {
   return (
     // eslint-disable-next-line @next/next/link-passhref
     <motion.div layout animate={{ opacity: 1 }} initial={{ opacity: 0 }} exit={{ opacity: 0 }}>
-      <Link href={`/${name}`}>
+      <Link href={`/${name}`} passHref>
         <div className="group relative transition-all duration-300 hover:cursor-pointer sm:hover:scale-110">
           <div className="overflow-hidden w-full rounded-sm aspect-w-3 aspect-h-4">
             <Image

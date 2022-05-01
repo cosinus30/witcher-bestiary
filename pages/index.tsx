@@ -39,7 +39,7 @@ const Home = ({ initialCreatures }: IHome) => {
     });
 
     setCreatures(filteredCreatures);
-  }, [selectedDropdownItem, filters]);
+  }, [selectedDropdownItem, filters, initialCreatures]);
 
   return (
     <div className="mx-4 mb-16">
